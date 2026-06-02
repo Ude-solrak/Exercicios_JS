@@ -1,0 +1,29 @@
+1.
+O escopo de função é acessível dentro da função inteira, podendo ser acessado dentro de qualquer parte da função, 
+já o escopo de bloco ele é limitado aquele bloco específico. 
+
+2.
+Será impresso "undefined" e "2", porque o hosting do Js declara a varíavel no topo da função antes de atribuir um valor a ela ignorando o fato de que a mesma já tinha sido declarada antes.
+
+3.
+function exemplo() { 
+	if (true) { 
+	   let nome = "Ana"; 
+	} 
+   console.log(nome); 
+} 
+ 
+4.
+O código abaixo exibe "3" 3 vezes porque o laço "for" tem apenas uma variável i para o código inteiro, 
+ao invés de criar uma para cada repetição pelo fato de ser utilizado "var" no lugar do "let", 
+para corrigir o erro é só trocar "var" por "let".
+
+for (var i = 0; i < 3; i++) { 
+   setTimeout(() => console.log(i), 100); 
+}
+
+correção:
+
+for (let i = 0; i < 3; i++) { 
+   setTimeout(() => console.log(i), 100); 
+}
