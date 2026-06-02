@@ -50,5 +50,24 @@ calcular(5,6,operacao)
 
 
 
+function f(num)
+{
+    return num*3
+}
 
+function g(num)
+{
+   return num+5
+}
 
+function compose(f,g)
+{
+    return function(x)
+    {
+        return f(g(x))
+    }
+}
+
+const compose_completo = compose(f,g)
+
+console.log(compose_completo(8))
