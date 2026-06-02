@@ -1,0 +1,18 @@
+3.
+Uma closure é uma função que guarda a referência de uma variável externa mesmo que o escopo em que essa variável foi criada deixe de existir, 
+ou seja a closure permite o uso e alteração de uma variável que "não" existe mais, isso é útil por que traz mais segurança e versatilidae ao código.
+
+4.
+O resultado do código abaixo será "1", "2", "1"
+
+function criarContador() { 
+let i = 0; 
+return function() { 
+return ++i; 
+} 
+} 
+let c1 = criarContador(); 
+let c2 = criarContador(); 
+console.log(c1()); // ? 
+console.log(c1()); // ? 
+console.log(c2()); // ? 
